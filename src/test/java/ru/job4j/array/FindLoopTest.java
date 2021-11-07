@@ -25,7 +25,7 @@ public class FindLoopTest {
     @Test
     public void whenArrayHas8Thenminus1() {
         int[] data = {5, 4, 3, 2};
-        int el = 8;
+        int el = 7;
         int result = FindLoop.indexOf(data, el);
         int expected = -1;
         Assert.assertEquals(expected, result);
