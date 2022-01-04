@@ -14,7 +14,25 @@ public class FindLoopTest {
     }
 
     @Test
-    public void whenFind3() {
+    public void whenArrayHasLength4Then1() {
+        int[] data = {5, 4, 3, 2};
+        int el = 4;
+        int result = FindLoop.indexOf(data, el);
+        int expected = 1;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenArrayIsLargerMinus1() {
+        int[] data = {5, 4, 3, 2};
+        int el = 7;
+        int result = FindLoop.indexOf(data, el);
+        int expected = -1;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenArrayHasLength4Then3() {
         int[] data = new int[] {5, 2, 10, 2, 4};
         int el = 2;
         int start = 2;
@@ -25,7 +43,7 @@ public class FindLoopTest {
     }
 
     @Test
-    public void whenFind4() {
+    public void whenArrayHasLength4Then4() {
         int[] data = new int[] {5, 2, 10, 2, 4};
         int el = 4;
         int start = 2;
@@ -36,7 +54,7 @@ public class FindLoopTest {
     }
 
     @Test
-    public void whenArrayHasLength6Then1() {
+    public void whenArrayIsLargerThenMinus1() {
         int[] data = new int[] {5, 2, 10, 2, 4};
         int el = 8;
         int start = 5;
